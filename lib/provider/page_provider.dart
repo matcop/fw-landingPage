@@ -17,6 +17,8 @@ class PageProvider extends ChangeNotifier {
 
       if (index != _curretIndex) {
         html.window.history.pushState(null, 'none ', '#/${_pages[index]}');
+
+        html.document.title = _pages[index].toUpperCase();
         _curretIndex = index;
       }
     });
