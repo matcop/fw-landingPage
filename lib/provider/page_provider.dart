@@ -7,6 +7,10 @@ class PageProvider extends ChangeNotifier {
 
   List<String> _pages = ['home', 'about', 'pricing', 'contact', 'location'];
 
+  createScrollController(String routeName) {
+    return (_pages.indexOf(routeName) == -1) ? 0 : _pages.indexOf(routeName);
+  }
+
   goTo(int index) {
     // final routeName = _pages[index];
     // print(routeName);
